@@ -1,0 +1,2 @@
+# jmBIG
+R package jmBIG
