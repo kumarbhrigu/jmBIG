@@ -3,7 +3,7 @@
     "path": "C:/rproject/jmBIG/README.md",
     "project_path": "README.md",
     "type": "markdown",
-    "hash": "0",
+    "hash": "4253223047",
     "contents": "",
     "dirty": false,
     "created": 1748877276627.0,
@@ -12,6 +12,7 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
+<<<<<<< HEAD
         "cursorPosition": "10,0",
         "scrollLine": "0"
     },
@@ -21,6 +22,17 @@
     "collab_server": "",
     "source_window": "",
     "last_content_update": 1748902139,
+=======
+        "cursorPosition": "10,20",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1748902067,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1748902067922,
+>>>>>>> test
     "read_only": false,
     "read_only_alternatives": []
 }
