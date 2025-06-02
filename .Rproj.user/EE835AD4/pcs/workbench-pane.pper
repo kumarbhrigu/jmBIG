@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "TabSet1": 3,
+=======
+    "TabSet1": 4,
+>>>>>>> dev
     "TabSet2": 0,
     "TabZoom": {}
 }
