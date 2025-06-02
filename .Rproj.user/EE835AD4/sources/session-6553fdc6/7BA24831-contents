@@ -5,6 +5,7 @@
 
 [![CRAN Status](https://www.r-pkg.org/badges/version/jmBIG)](https://CRAN.R-project.org/package=jmBIG)
 [![License: GPL-3](https://img.shields.io/badge/license-GPL--3-blue.svg)](https://cran.r-project.org/web/licenses/GPL-3)
+![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/jmBIG)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 
 <!-- badges: end -->
