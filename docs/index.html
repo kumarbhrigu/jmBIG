@@ -65,17 +65,67 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-Provides analysis tools for big data where the sample size is very large. It offers
-             a suite of functions for fitting and predicting joint models, which allow for the simultaneous
-             analysis of longitudinal and time-to-event data. This statistical methodology is particularly 
-             useful in medical research where there is often interest in understanding the relationship 
-             between a longitudinal biomarker and a clinical outcome, such as survival or disease progression.
-             This can be particularly useful in a clinical setting where it is important to be able to predict 
-             how a patient's health status may change over time. Overall, this package provides a 
-             comprehensive set of tools for joint modeling of BIG data obtained as survival and 
-             longitudinal outcomes with both Bayesian and non-Bayesian approaches. Its versatility
-             and flexibility make it a valuable resource for researchers in many different fields,
-             particularly in the medical and health sciences.  
+<div class="section level1">
+<div class="page-header"><h1 id="jmbig-joint-longitudinal-and-survival-models-for-big-data">jmBIG: Joint Longitudinal and Survival Models for Big Data<a class="anchor" aria-label="anchor" href="#jmbig-joint-longitudinal-and-survival-models-for-big-data"></a>
+</h1></div>
+<p><img src="reference/figures/jmBIGlogo.png" align="right" alt="jmBIG logo" width="200"></p>
+<!-- badges: start -->
+
+<!-- badges: end -->
+<p><br></p>
+<blockquote>
+<p><strong><code>jmBIG</code></strong> is an R package that provides a flexible, modular framework for <strong>joint modeling of longitudinal and time-to-event data</strong>, specifically optimized for <strong>large datasets</strong> commonly found in real-world clinical and biomedical studies.</p>
+</blockquote>
+<hr>
+<div class="section level2">
+<h2 id="id_-features">✨ Features<a class="anchor" aria-label="anchor" href="#id_-features"></a>
+</h2>
+<ul>
+<li>🧠 <strong>Joint modeling</strong> of longitudinal biomarkers and survival outcomes</li>
+<li>⚡ <strong>Big data readiness</strong>: designed for efficiency on large sample sizes</li>
+<li>🔁 Compatible with:
+<ul>
+<li>
+<code>JMbayes2</code> (Bayesian joint modeling)</li>
+<li>
+<code>FastJM</code> (Frequentist joint modeling)</li>
+<li>
+<code>rstanarm</code> (Bayesian GLMMs)</li>
+<li>
+<code>joineRML</code> (MLE-based methods)</li>
+</ul>
+</li>
+<li>🧾 Posterior prediction of:
+<ul>
+<li>Individual survival probabilities</li>
+<li>Longitudinal trajectories</li>
+</ul>
+</li>
+<li>📊 Tools for:
+<ul>
+<li>Dynamic predictions</li>
+<li>Bootstrapped confidence intervals</li>
+<li>Visual summaries</li>
+</ul>
+</li>
+</ul>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="id_-installation">📦 Installation<a class="anchor" aria-label="anchor" href="#id_-installation"></a>
+</h2>
+<div class="section level3">
+<h3 id="from-github-development-version">From GitHub (development version)<a class="anchor" aria-label="anchor" href="#from-github-development-version"></a>
+</h3>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># If not already installed</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Install jmBIG from GitHub</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"kumarbhrigu/jmBIG"</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -110,7 +160,14 @@ Provides analysis tools for big data where the sample size is very large. It off
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://CRAN.R-project.org/package=jmBIG" class="external-link"><img src="https://www.r-pkg.org/badges/version/jmBIG" alt="CRAN Status"></a></li>
+<li><a href="https://cran.r-project.org/web/licenses/GPL-3" class="external-link"><img src="https://img.shields.io/badge/license-GPL--3-blue.svg" alt="License: GPL-3"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+</ul>
+</div>
 
   </div>
 </div>
