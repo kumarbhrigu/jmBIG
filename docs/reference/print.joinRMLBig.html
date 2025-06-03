@@ -85,46 +85,9 @@
 <span class="r-in"><span>timeVar<span class="op">=</span><span class="st">'visit'</span>,</span></span>
 <span class="r-in"><span>samplesize<span class="op">=</span><span class="fl">200</span>,</span></span>
 <span class="r-in"><span>id<span class="op">=</span><span class="st">'id'</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> EM algorithm has converged!</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Calculating post model fit statistics...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> EM algorithm has converged!</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Calculating post model fit statistics...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> EM algorithm has converged!</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Calculating post model fit statistics...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> EM algorithm has converged!</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Calculating post model fit statistics...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> EM algorithm has converged!</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Calculating post model fit statistics...</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in mjoint(formLongFixed = longm, formLongRandom = rd, formSurv = survm,     data = dtlong1[[i]], survData = dtsurv1[[i]], timeVar = timeVar):</span> could not find function "mjoint"</span>
 <span class="r-in"><span><span class="fu"><a href="print.html">print</a></span><span class="op">(</span><span class="va">mod4</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Joint model for Big data using joineRML</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Call: </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> joinRMLBig(dtlong = long2, dtsurv = surv2, longm = y ~ x7 + visit, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     survm = Surv(time, status) ~ x1 + visit, samplesize = 200, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     rd = ~visit | id, timeVar = "visit", id = "id")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Total observation in longitudinal data: 1000 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Chunk size: 200 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Longitudinal process: </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               Estimate    SE   Zvalue Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> (Intercept)_1    8.771 0.175   50.130      0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> x7_1            -0.022 0.000 -536.692      0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> visit_1         -0.085 0.002  -35.703      0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sigma2_1         0.599 0.000 3174.213      0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Survival process: </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          Estimate    SE  ZValue Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> x11       -0.012 0.060  -0.205  0.837</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> visit     -0.140 0.007 -20.201  0.000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gamma_1   -0.011 0.005  -2.126  0.034</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Variance Covariance matrix of Random effects:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           Intercept  visit</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Intercept     1.975 -0.352</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> visit        -0.352  0.132</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'mod4' not found</span>
 <span class="r-in"><span>   <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
