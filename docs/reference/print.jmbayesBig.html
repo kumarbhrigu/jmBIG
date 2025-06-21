@@ -86,9 +86,35 @@
 <span class="r-in"><span>nchain<span class="op">=</span><span class="fl">1</span>,</span></span>
 <span class="r-in"><span>samplesize<span class="op">=</span><span class="fl">200</span>,</span></span>
 <span class="r-in"><span>id<span class="op">=</span><span class="st">'id'</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in jm(fm2, fm1, time_var = timeVar, n_chains = nchain, n_iter = niter,     n_burnin = nburnin):</span> could not find function "jm"</span>
 <span class="r-in"><span><span class="fu"><a href="print.html">print</a></span><span class="op">(</span><span class="va">mod3</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'mod3' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Joint model for Big data using jmbayes2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Call: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> jmbayesBig(dtlong = long2, dtsurv = surv2, longm = y ~ x7 + visit, </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     survm = Surv(time, status) ~ x1 + visit, samplesize = 200, </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     rd = ~visit | id, timeVar = "visit", nchain = 1, id = "id")</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Total observation in longitudinal data: 1000 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Chunk size: 200 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Longitudinal process: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               Mean StDev   2.5%  97.5% Pvalue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> (Intercept)  8.848 0.455  7.319  9.123  0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> x7          -0.023 0.007 -0.028 -0.001  0.001</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> visit       -0.093 0.038 -0.149 -0.002  0.014</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sigma        0.778 0.020  0.740  0.821  0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Survival process: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          Mean StDev   2.5% 97.5% Pvalue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> x11   -0.054 0.312 -0.748 0.451  0.863</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> visit -0.102 0.064 -0.101 0.158  0.111</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Mean  -0.148 0.057 -0.229 0.016  0.010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Random effects covariance matrix:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    D[1, 1]    D[2, 1]    D[2, 2] </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  1.9874728 -0.3173188  0.1265917 </span>
 <span class="r-in"><span>   <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

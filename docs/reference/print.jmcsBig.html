@@ -82,9 +82,40 @@
 <span class="r-in"><span>survm<span class="op">=</span><span class="fu"><a href="https://rdrr.io/pkg/survival/man/Surv.html" class="external-link">Surv</a></span><span class="op">(</span><span class="va">time</span>,<span class="va">status</span><span class="op">)</span><span class="op">~</span><span class="va">x1</span><span class="op">+</span><span class="va">visit</span>,</span></span>
 <span class="r-in"><span>rd<span class="op">=</span> <span class="op">~</span> <span class="va">visit</span><span class="op">|</span><span class="va">id</span>,</span></span>
 <span class="r-in"><span>samplesize<span class="op">=</span><span class="fl">200</span>,id<span class="op">=</span><span class="st">'id'</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in jmcs(long.formula = longm, ydata = data.frame(dtlong1[[i]]),     surv.formula = survm, cdata = data.frame(dtsurv1[[i]]), random = rd):</span> could not find function "jmcs"</span>
 <span class="r-in"><span><span class="fu"><a href="print.html">print</a></span><span class="op">(</span><span class="va">mod2</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'mod2' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Joint model for Big data using FastJM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Call: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> jmcsBig(dtlong = data.frame(long2), dtsurv = data.frame(surv2), </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     longm = y ~ x7 + visit, survm = Surv(time, status) ~ x1 + </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         visit, samplesize = 200, rd = ~visit | id, id = "id")</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Total observation in longitudinal data: 1000 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Chunk size: 200 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Longitudinal process: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             Estimate    SE Zvalue Pvalue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> (Intercept)    9.130 0.483 18.896  0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> x7            -0.028 0.008 -3.571  0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> visit         -0.085 0.054 -1.592  0.111</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sigma^2        0.596 0.012 48.186  0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Survival process: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          Estimate    SE ZValue Pvalue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> x11_1     -0.032 0.257 -0.123  0.902</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> visit_1   -0.145 0.097 -1.497  0.134</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Association parameters :</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               Estimate    SE Zvalue Pvalue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> (Intercept)_1    0.219 0.144  1.522  0.128</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> visit_1          0.272 0.844  0.322  0.748</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Variance Covariance matrix of Random effects:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           Intercept  visit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Intercept     2.141 -0.376</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> visit        -0.376  0.141</span>
 <span class="r-in"><span>   <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
