@@ -1,5 +1,5 @@
 #' @title Joint model for BIG data using joineRML
-#' @description function for joint model in BIG DATA using joineRML
+#' @description function for joint model in BIG DATA using \code{joineRML}
 #' @param dtlong longitudinal dataset, which contains id,visit time,longitudinal measurements along with various covariates
 #' @param dtsurv survival dataset corresponding to the longitudinal dataset, with survival status and survival time
 #' @param longm model for longitudinal response
