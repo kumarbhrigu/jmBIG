@@ -2,7 +2,7 @@
 % Please edit documentation in R/prediction.R
 \name{postSurvfit}
 \alias{postSurvfit}
-\title{postSurvfit}
+\title{Prediction using \code{rstanarm}}
 \usage{
 postSurvfit(model, ids, ...)
 }

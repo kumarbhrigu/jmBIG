@@ -2,7 +2,7 @@
 % Please edit documentation in R/prediction.R
 \name{postTraj}
 \alias{postTraj}
-\title{postTraj}
+\title{Prediction using \code{rstanarm}}
 \usage{
 postTraj(model, m, ids, ...)
 }
@@ -19,7 +19,7 @@ postTraj(model, m, ids, ...)
 list of predicted values for the given id
 }
 \description{
-prediction of the posterio trajectory for longitudinal marker while using rstanarm for Big data
+prediction of the posterior trajectory for longitudinal marker while using \code{rstanarm} for Big data
 }
 \examples{
  \donttest{

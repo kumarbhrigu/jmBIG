@@ -25,7 +25,7 @@ jmcsBig(dtlong, dtsurv, longm, survm, samplesize = 50, rd, id)
 returns a list containing various output which are useful for prediction.
 }
 \description{
-function for joint model in BIG DATA using FastJM
+function for joint model in BIG DATA using \code{FastJM}
 }
 \examples{
   \donttest{
@@ -34,8 +34,7 @@ library(survival)
 library(dplyr)
 fit2<-jmcsBig(dtlong=data.frame(long2),dtsurv = data.frame(surv2),
 longm=y~ x7+visit,survm=Surv(time,status)~x1+visit,rd= ~ visit|id,samplesize=200,id='id')
-P2<-survfitJMCS(model<-fit2,ids<-c(400),estimator = 'median')
-plot(P2$p1[[1]],estimator="both",include.y = TRUE)
+print(fit2)
 ##
   }
 

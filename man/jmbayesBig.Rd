@@ -45,7 +45,7 @@ jmbayesBig(
 returns a list containing various output which are useful for prediction.
 }
 \description{
-function for joint model in BIG DATA using JMbayes2
+function for joint model in BIG DATA using \code{JMbayes2}
 }
 \examples{
 

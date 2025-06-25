@@ -8,7 +8,7 @@
 
 
 #' @title Joint model for BIG data using JMbayes2
-#' @description function for joint model in BIG DATA using JMbayes2
+#' @description function for joint model in BIG DATA using \code{JMbayes2}
 #' @param dtlong longitudinal dataset, which contains id,visit time,longitudinal measurements along with various covariates
 #' @param dtsurv survival dataset corresponding to the longitudinal dataset, with survival status and survival time
 #' @param longm fixed effect model for longitudinal response

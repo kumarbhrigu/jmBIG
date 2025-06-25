@@ -2,7 +2,7 @@
 % Please edit documentation in R/prediction.R
 \name{predJMbayes}
 \alias{predJMbayes}
-\title{predJMbayes}
+\title{Prediction using \code{JMbayes2}}
 \usage{
 predJMbayes(model, ids, process = "longitudinal", newdata, ...)
 }
@@ -46,8 +46,8 @@ cdt<-surv2[,'id']\%>\%filter(id\%in\%c(900))
 names(cdt)
 newdata<-full_join(ydt,cdt,by='id')
 P2<-predJMbayes(model<-mod3,ids<-c(900),newdata=newdata,process = 'event')
-pp1<-plot(P2$p1[[1]])
-pp1
+plot(P2$p1[[1]])
+
 ##
 
    }
