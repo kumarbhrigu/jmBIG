@@ -2,26 +2,26 @@
 % Please edit documentation in R/prediction.R
 \name{survfitJMCS}
 \alias{survfitJMCS}
-\title{survfitJMCS}
+\title{Prediction using \code{FastJM}}
 \usage{
-survfitJMCS(model, ids, estimator, conf.int = TRUE, include.y = FALSE)
+survfitJMCS(model, ids, u, method = "GH", obs.time)
 }
 \arguments{
 \item{model}{fitted model object}
 
 \item{ids}{value of id}
 
-\item{estimator}{see \code{survfitjmcs}}
+\item{u}{see \code{survfitjmcs}}
 
-\item{conf.int}{see \code{survfitjmcs}}
+\item{method}{options are 'Laplace','GH'}
 
-\item{include.y}{see \code{survfitjmcs}}
+\item{obs.time}{vector which represents time variable in the longitudinal data}
 }
 \value{
-list of predicted value for the given id
+list of predicted value for the given id along with other information relevant for survival probability confidence plot
 }
 \description{
-prediction of survival probability and longitudinal marker using FastJM for BIG data
+prediction of survival probability using \code{FastJM} for BIG data
 }
 \examples{
   \donttest{
@@ -35,9 +35,9 @@ survm=Surv(time,status)~x1+visit,
 rd= ~ visit|id,
 samplesize=200,id='id')
 mod2<-jmcs1
-P2<-survfitJMCS(model<-mod2,ids<-c(400),estimator = 'median')
-pp1<-plot(P2$p1[[1]],estimator="both",include.y = TRUE)
-pp1
+P2<-survfitJMCS(model<-mod2,ids<-c(5),u<-seq(surv2[surv2$id==5,]$time,
+surv2[surv2$id==5,]$time+10,0.2),obs.time='time')
+print(P2)
 ##
   }
 }

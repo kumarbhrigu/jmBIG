@@ -39,7 +39,7 @@ jmstanBig(
 returns a list containing various output which are useful for prediction.
 }
 \description{
-function for joint model in BIG DATA using \link{rstanarm} package
+function for joint model in BIG DATA using \code{rstanarm} package
 }
 \examples{
 

@@ -1,5 +1,5 @@
 #' @title  Joint model for BIG data using rstanarm
-#' @description function for joint model in BIG DATA using \link{rstanarm} package
+#' @description function for joint model in BIG DATA using \code{rstanarm} package
 #' @param dtlong longitudinal dataset, which contains id,visit time,longitudinal measurements along with various covariates
 #' @param dtsurv survival dataset corresponding to the longitudinal dataset, with survival status and survival time
 #' @param longm model for longitudinal response

@@ -4,12 +4,10 @@
 \alias{print.joinRMLBig}
 \title{print.joinRMLBig}
 \usage{
-\method{print}{joinRMLBig}(object, digits = 4, ...)
+\method{print}{joinRMLBig}(x, ...)
 }
 \arguments{
-\item{object}{object}
-
-\item{digits}{used for round the numeric values after decimal}
+\item{x}{fitted object}
 
 \item{...}{others}
 }
@@ -19,7 +17,7 @@ prints table containing various parameter estimates,
         if the model is bayesian it includes their credible interval too.
 }
 \description{
-print.joinRMLBig
+print method for class 'joinRMLBig'
 }
 \examples{
  \donttest{

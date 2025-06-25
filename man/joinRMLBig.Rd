@@ -27,7 +27,7 @@ joinRMLBig(dtlong, dtsurv, longm, survm, samplesize = 50, rd, timeVar, id)
 returns a list containing various output which are useful for prediction.
 }
 \description{
-function for joint model in BIG DATA using joineRML
+function for joint model in BIG DATA using \code{joineRML}
 }
 \examples{
   \donttest{

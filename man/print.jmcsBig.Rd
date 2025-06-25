@@ -4,12 +4,10 @@
 \alias{print.jmcsBig}
 \title{print.jmcsBig}
 \usage{
-\method{print}{jmcsBig}(object, digits = 3, ...)
+\method{print}{jmcsBig}(x, ...)
 }
 \arguments{
-\item{object}{object}
-
-\item{digits}{used for round the numeric values after decimal}
+\item{x}{fitted object}
 
 \item{...}{others}
 }
@@ -19,7 +17,7 @@ prints table containing various parameter estimates,
         if the model is bayesian it includes their credible interval too.
 }
 \description{
-print.jmcsBig
+print method for class 'jmcsBig'
 }
 \examples{
  \donttest{

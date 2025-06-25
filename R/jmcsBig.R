@@ -1,5 +1,5 @@
 #' @title  Joint model for BIG data using FastJM
-#' @description function for joint model in BIG DATA using FastJM
+#' @description function for joint model in BIG DATA using \code{FastJM}
 #' @param dtlong longitudinal dataset, which contains id,visit time,longitudinal measurements along with various covariates
 #' @param dtsurv survival dataset corresponding to the longitudinal dataset, with survival status and survival time
 #' @param longm model for longitudinal response
@@ -19,8 +19,7 @@
 #' library(dplyr)
 #' fit2<-jmcsBig(dtlong=data.frame(long2),dtsurv = data.frame(surv2),
 #' longm=y~ x7+visit,survm=Surv(time,status)~x1+visit,rd= ~ visit|id,samplesize=200,id='id')
-#' P2<-survfitJMCS(model<-fit2,ids<-c(400),estimator = 'median')
-#' plot(P2$p1[[1]],estimator="both",include.y = TRUE)
+#' print(fit2)
 #' ##
 #'   }
 #'
@@ -139,6 +138,7 @@ jmcsBig<-function(dtlong,dtsurv,longm,survm,samplesize=50,rd,id){
   result$pseudoMod<-mod11
   result$nr<-nr
   result$samplesize<-samplesize
+  result$others<-list(dtlong=dtlong,dtsurv=dtsurv,longm=longm,survm=survm,rd=rd,id=id,samplesize=samplesize)
   class(result)<-'jmcsBig'
   result
 
@@ -146,44 +146,3 @@ jmcsBig<-function(dtlong,dtsurv,longm,survm,samplesize=50,rd,id){
 
 
 
-##############################################################
-# Plot conditional probabilities for new subjects
-##############################################################
-#' @import FastJM
-#' @export survfitJMCS
-survfitJMCS<-function(model,ids,estimator,conf.int=TRUE,include.y=FALSE){
-  model<-model$uprlist;ids<-ids
-  nlength<-ids
-  mlist<-list()
-  mlonglist<-list()
-  for(j in 1:length(model)){
-    mlonglist[[j]]<-model[[j]]$cdata
-  }
-  f1<-function(x,id){as.numeric(id%in%x$id)}
-
-  for(i in 1:length(ids)){
-    mlist[[i]]<-sapply(mlonglist,f1,id=ids[i])
-  }
-  mc<-matrix(unlist(mlist),nrow=length(ids),ncol=length(model),byrow=T)
-  idm<-apply(mc,1,function(x){which(x!=0)})
-
-  p1<-list()
-  for(k in 1:length(ids)){
-    Mod11<-model[[idm[[k]][1]]]
-    ynewdata<-Mod11$ydata[Mod11$ydata$id==ids[k],]
-    cnewdata<-Mod11$cdata[Mod11$cdata$id==ids[k],]
-    p1[[k]]<-survfitjmcs(Mod11,
-                         ynewdata=ynewdata,
-                         cnewdata=cnewdata,
-                         u = seq(3, 4.8, by = 0.2),M=100,seed=100)
-  }
-
-  P1<-Reduce('rbind',p1)
-  #P1<-arrange(P1,desc(P1$id))
-  result<-list()
-  result$P1<-P1
-  result$p1<-p1
-  result
-}
-
-utils::globalVariables(c('jmcs'))
